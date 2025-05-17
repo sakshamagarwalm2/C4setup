@@ -14,19 +14,19 @@ body {
     --card-foreground: 240 50% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 50% 11%;
-    --primary: 240 100% 60%; /* Main Blue #3333FF */
-    --primary-foreground: 0 0% 100%; /* White text on blue buttons/backgrounds */
+    --primary: 120 100% 40%; /* Changed from #39ff14 to #20cc00 */
+    --primary-foreground: 0 0% 100%; /* White text on primary backgrounds */
     --secondary: 0 0% 98%; /* Very Light Grey for secondary backgrounds */
     --secondary-foreground: 240 50% 11%;
     --muted:  0 0% 95%; /* Slightly darker grey for muted elements */
     --muted-foreground: 240 10% 45%; /* Grey text */
-    --accent: 75 100% 70%; /* Lime Green #CCFF66 */
-    --accent-foreground: 240 50% 11%; /* Dark text on lime green */
+    --accent: 50 99% 54%; /* Changed from lime green to #feda14 (yellow/gold) */
+    --accent-foreground: 240 50% 11%; /* Dark text on accent */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 100% 60%; /* Changed to primary blue for default borders */
-    --input: 240 100% 60%; /* Changed to primary blue for input borders */
-    --ring: 240 100% 70%; /* Lighter blue for focus rings or use accent */
+    --border: 293 100% 35%; /* Changed to primary purple for default borders */
+    --input: 293 100% 35%; /* Changed to primary purple for input borders */
+    --ring: 293 100% 45%; /* Lighter purple for focus rings */
     --radius: 0.5rem;
 
     --chart-1: 12 76% 61%;
@@ -53,19 +53,19 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 240 100% 65%; /* Slightly adjusted blue for dark mode */
+    --primary: 120 100% 40%; /* Changed from #39ff14 to #20cc00 for dark mode */
     --primary-foreground: 0 0% 100%; 
     --secondary: 240 5% 10%; /* Adjusted dark secondary for slight contrast from card/bg */
     --secondary-foreground: 0 0% 98%;
     --muted: 240 5% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 75 100% 60%; /* Slightly adjusted lime for dark mode */
+    --accent: 50 99% 54%; /* Changed from lime green to #feda14 (yellow/gold) for dark mode */
     --accent-foreground: 240 50% 11%; 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 100% 65%; /* Primary blue for dark mode borders */
-    --input: 240 100% 65%; /* Primary blue for dark mode input borders */
-    --ring: 240 100% 75%;
+    --border: 120 100% 40%; /* Changed to match new primary color */
+    --input: 120 100% 40%; /* Changed to match new primary color */
+    --ring: 120 100% 50%; /* Lighter version for focus rings */
 
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -98,10 +98,10 @@ body {
     width: 12px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(var(--primary)); /* Use primary color for track */
+    background: hsl(var(--primary)); /* Now uses neon green color for track */
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--accent)); /* Use accent color for thumb */
+    background: hsl(var(--accent)); /* Now uses yellow/gold color for thumb */
     border-radius: 6px;
   }
   ::-webkit-scrollbar-thumb:hover {

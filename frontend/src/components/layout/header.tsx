@@ -1,5 +1,4 @@
-// @ts-nocheck
-"use client";
+'use client'
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -15,9 +14,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { ProductEnquiryButton } from "./product-enquiry-button";
 
+// In your header.tsx file
 interface HeaderProps {
-  onProductEnquiryClick: () => void;
+  onProductEnquiryClick?: () => void;  // Make it optional with ?
 }
 
 export function Header({ onProductEnquiryClick }: HeaderProps) {
@@ -91,7 +92,7 @@ export function Header({ onProductEnquiryClick }: HeaderProps) {
           <div className="flex items-center space-x-4">
             <div className="hidden md:block">
               <AnimatedButton 
-                onClick={onProductEnquiryClick} 
+                onClick={() => onProductEnquiryClick?.()}  
                 variant="primary" // Lime green with blue border
               >
                 Product Enquiry
@@ -143,7 +144,10 @@ export function Header({ onProductEnquiryClick }: HeaderProps) {
           </nav>
           <div className="px-4 pt-4">
              <AnimatedButton 
-                onClick={() => { onProductEnquiryClick(); toggleMobileMenu(); }} 
+                onClick={() => { 
+                  onProductEnquiryClick?.(); 
+                  toggleMobileMenu(); 
+                }} 
                 variant="primary" 
                 className="w-full"
             >
@@ -155,3 +159,6 @@ export function Header({ onProductEnquiryClick }: HeaderProps) {
     </header>
   );
 }
+
+// Remove the duplicate Header function below
+// export function Header() { ... }
