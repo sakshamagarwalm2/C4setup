@@ -2,12 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { AdminLayout } from "@/components/layout/admin-layout";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
 import { Save } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
 
 interface AboutContent {
   _id?: string;
@@ -35,7 +34,7 @@ export default function AdminAbout() {
       setLoading(true);
       const response = await fetch('/api/about');
       if (!response.ok) {
-        throw new Error('Failed to fetch about content');
+        throw new Error('Failed to fetch about page content');
       }
       const data = await response.json();
       setAboutContent(data || {
@@ -47,7 +46,7 @@ export default function AdminAbout() {
       console.error(err);
       toast({
         title: "Error",
-        description: "Failed to load about page content. Please try again.",
+        description: "An error occurred while loading the 'About' page content. Please refresh and try again.",
         variant: "destructive",
       });
     } finally {

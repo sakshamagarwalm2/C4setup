@@ -1,8 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const productRoutes = require('./routes/products');
 const enquiryRoutes = require('./routes/enquiries');
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,11 +25,11 @@ app.get('/', (req, res) => {
 });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/c4hydrogen', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('MongoDB connected'))
+.then(() => console.log('MongoDB Atlas connected'))
 .catch(err => console.log('MongoDB connection error:', err));
 
 app.listen(PORT, () => {

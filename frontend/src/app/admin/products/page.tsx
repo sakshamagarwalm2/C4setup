@@ -2,20 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { AdminLayout } from "@/components/layout/admin-layout";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Plus, Pencil, Trash2, Save, X } from "lucide-react";
-import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
-  TableRow 
+import { useToast } from "@/hooks/use-toast";
+import { Save, Plus, X, Trash2, Pencil } from "lucide-react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from "@/components/ui/table";
-import { useToast } from "@/components/ui/use-toast";
 
 interface Product {
   _id: string;
@@ -23,7 +23,10 @@ interface Product {
   capacity: string;
   description: string;
   image: string;
-  features: { title: string; description: string }[];
+  features: {
+    title: string;
+    description: string;
+  }[];
 }
 
 export default function AdminProducts() {
@@ -51,14 +54,19 @@ export default function AdminProducts() {
       setLoading(true);
       const response = await fetch('/api/products');
       if (!response.ok) {
-        throw new Error('Failed to fetch products');
+        throw new Error('Error fetching products list');
       }
       const data = await response.json();
       setProducts(data);
       setError(null);
     } catch (err) {
-      setError('Error loading products. Please try again.');
+      setError('Failed to load products. Please retry.');
       console.error(err);
+      toast({
+        title: "Error",
+        description: "An error occurred while fetching the product list. Please check your connection and retry.",
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }
