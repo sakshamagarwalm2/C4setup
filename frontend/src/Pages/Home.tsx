@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { EnquiryModal } from "@/components/ui/enquiry-modal";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ElectrolyzerFeaturesSection } from "@/components/sections/electrolyzer-features-section";
@@ -38,7 +37,6 @@ export default function HomePage() {
         <PartnersSection />
         <NewsletterSection />
       </main>
-      <Footer />
       <EnquiryModal isOpen={isEnquiryModalOpen} onClose={closeEnquiryModal} />
     </div>
   );

@@ -1,7 +1,6 @@
 "use client";
 
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { useState } from "react";
 import { EnquiryModal } from "@/components/ui/enquiry-modal";
 import Image from "next/image";
@@ -205,7 +204,6 @@ export default function ProductPage() {
         
         <NewsletterSection />
       </main>
-      <Footer />
       <EnquiryModal isOpen={isEnquiryModalOpen} onClose={closeEnquiryModal} />
     </div>
   );
