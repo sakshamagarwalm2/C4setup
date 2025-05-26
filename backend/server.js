@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const productRoutes = require('./routes/products');
 const enquiryRoutes = require('./routes/enquiries');
 
-// Load environment variables
+// 
 dotenv.config();
 
 const app = express();
