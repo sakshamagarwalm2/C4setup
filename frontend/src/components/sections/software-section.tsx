@@ -7,7 +7,7 @@ export function SoftwareSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative aspect-[16/7] w-full rounded-lg overflow-hidden shadow-2xl border-2 border-primary">
           <Image
-            src="https://placehold.co/1200x525.png" 
+            src="/assests/application.jpeg" 
             alt="Software application interface"
             layout="fill"
             objectFit="cover"

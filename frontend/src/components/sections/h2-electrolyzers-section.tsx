@@ -3,10 +3,10 @@ import { AnimatedButton } from "@/components/ui/animated-button";
 
 export function H2ElectrolyzersSection() {
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section className="py-10 sm:py-12 mx-16 bg-secondary ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">H2 Electrolyzers</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold text-foreground">H2 Electrolyzers</h2>
         </div>
         <div className="relative aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl group border-2 border-primary">
           <Image
@@ -25,7 +25,7 @@ export function H2ElectrolyzersSection() {
           </div>
         </div>
         <div className="mt-12 text-center">
-          <AnimatedButton href="/product" variant="primary">
+          <AnimatedButton href="/product" variant="primary" className="w-9/12">
             View all Features
           </AnimatedButton>
         </div>

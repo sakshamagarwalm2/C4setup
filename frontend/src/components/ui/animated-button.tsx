@@ -23,7 +23,7 @@ export function AnimatedButton({
   const baseClasses = "group relative inline-flex items-center justify-center px-6 py-3 overflow-hidden rounded-md text-sm font-medium transition-all duration-300 ease-out";
   
   const variantClasses = {
-    primary: "bg-accent text-accent-foreground hover:bg-accent/90 border-2 border-primary", // Main CTA: Lime green with 2px blue border
+    primary: "bg-accent text-accent-foreground hover:bg-accent/90 border-2 border-primary ", // Main CTA: Lime green with 2px blue border
     secondary: "bg-transparent text-primary border-2 border-primary hover:bg-primary/10", // Blue outline with 2px border
     onCard: "bg-background text-foreground hover:bg-muted border-2 border-primary", // Default on-card button with 2px blue border
     onCardLime: "bg-accent text-accent-foreground hover:bg-accent/90 border-2 border-primary", // Lime green button on a card with 2px blue border

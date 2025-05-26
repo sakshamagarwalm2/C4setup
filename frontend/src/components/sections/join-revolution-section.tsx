@@ -21,7 +21,7 @@ export function JoinRevolutionSection() {
             />
           </div>
           <Card className="bg-card shadow-lg"> {/* Will get 1px blue border from globals.css */}
-            <CardContent className="p-8 md:p-10">
+            <CardContent className="p-8 md:p-10 flex flex-col">
               <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
                 Passionate about green hydrogen?
               </h3>

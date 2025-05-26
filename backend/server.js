@@ -9,7 +9,7 @@ const enquiryRoutes = require('./routes/enquiries');
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5009;
 
 // Middleware
 app.use(cors()); // Enable CORS for all routes
